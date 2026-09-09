@@ -18,6 +18,7 @@ runs:
       run: |
         ls -lrta
         find . -name in-place-upgrade-schema.json
+        cat in-place-upgrade-onboarding.yml
         cat $(find . -name in-place-upgrade-schema.json)
         pip install check-jsonschema
         check-jsonschema --schemafile central-schema/IPU-v2/schema/in-place-upgrade-schema.json in-place-upgrade-onboarding.yml
