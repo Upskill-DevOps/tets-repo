@@ -19,5 +19,5 @@ jobs:
         uses:  actions/checkout@v7
 
       - name: validation
-        uses: ${REPO_OWNER}/tets-repo/actions/server-validation@main
+        uses: ${env.REPO_OWNER}/tets-repo/actions/server-validation@main
           
