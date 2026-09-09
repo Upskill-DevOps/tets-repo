@@ -15,5 +15,7 @@ runs:
     - name: validating the Configuration
       shell: bash
       run: |
+        ls -lrta
+        find . -name in-place-upgrade-schema.json
         pip install check-jsonschema
         check-jsonschema --schemafile IPU-v2/schema/in-place-upgrade-schema.json in-place-upgrade-onboarding.yml
