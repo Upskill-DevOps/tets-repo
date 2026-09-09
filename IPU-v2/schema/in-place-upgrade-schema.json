@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "application",
+    "infrastructure"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "1.0"
+      ]
+    },
+    "application": {
+      "type": "object",
+      "required": [
+        "name",
+        "environment",
+        "aws_account_id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "environment": {
+          "type": "string"
+        },
+        "aws_account_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "infrastructure": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "os",
+          "version"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "os": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
