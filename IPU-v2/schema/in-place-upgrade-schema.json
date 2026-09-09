@@ -29,7 +29,8 @@
         },
         "aws_account_id": {
           "type": "string",
-          "pattern": "^[0-9]{12}$"
+          "maxLength": 12,
+          "minLength": 12
         }
       },
       "additionalProperties": false
