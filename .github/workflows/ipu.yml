@@ -1,0 +1,23 @@
+name: caller workflow
+
+on:
+  workflow_call:
+
+jobs:
+  validation:
+    name: Server Validation
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO_OWNER: ${{ github.repository_owner }}
+    permissions: 
+      id-token: write
+      contents: read
+
+    steps:
+      - name: checkout
+        uses:  actions/checkout@v7
+
+      - name: validation
+        uses: ${REPO_OWNER}/tets-repo/actions/server-validation@main
+          
