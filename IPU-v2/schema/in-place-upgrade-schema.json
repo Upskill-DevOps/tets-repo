@@ -29,7 +29,7 @@
         },
         "aws_account_id": {
           "type": "integer",
-          "minLength": 12
+          "maxLength": 12
         }
       },
       "additionalProperties": false
