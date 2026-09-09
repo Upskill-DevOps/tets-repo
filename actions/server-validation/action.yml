@@ -9,6 +9,7 @@ runs:
       uses: actions/checkout@v7
       with:
         repository: ${{ github.repository_owner }}/tets-repo
+        path: central-schema
         ref: main
         sparse-checkout: IPU-v2/schema/in-place-upgrade-schema.json
 
@@ -18,4 +19,4 @@ runs:
         ls -lrta
         find . -name in-place-upgrade-schema.json
         pip install check-jsonschema
-        check-jsonschema --schemafile IPU-v2/schema/in-place-upgrade-schema.json in-place-upgrade-onboarding.yml
+        check-jsonschema --schemafile central-schema/IPU-v2/schema/in-place-upgrade-schema.json in-place-upgrade-onboarding.yml
