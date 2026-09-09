@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
-      REPO_OWNER: ${{ github.repository_owner }}
     permissions: 
       id-token: write
       contents: read
@@ -19,5 +18,5 @@ jobs:
         uses:  actions/checkout@v7
 
       - name: validation
-        uses: ${env.REPO_OWNER}/tets-repo/actions/server-validation@main
+        uses: Upskill-DevOps/tets-repo/actions/server-validation@main
           
