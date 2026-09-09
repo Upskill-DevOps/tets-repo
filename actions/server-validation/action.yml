@@ -9,8 +9,9 @@ runs:
       uses: actions/checkout@v7
       with:
         repository: ${{ github.repository_owner }}/tets-repo
-        path: IPU-v2/schema
+        path: IPU-v2
         ref: main
+        sparse-checkout: IPU-v2/schema/in-place-upgrade-schema.json
 
     - name: validating the Configuration
       shell: bash
