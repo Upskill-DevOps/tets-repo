@@ -28,9 +28,8 @@
           "type": "string"
         },
         "aws_account_id": {
-          "type": "integer",
-          "maxContains": 12,
-          "minContains": 12
+          "type": "string",
+          "pattern": "^[0-9]{12}$"
         }
       },
       "additionalProperties": false
